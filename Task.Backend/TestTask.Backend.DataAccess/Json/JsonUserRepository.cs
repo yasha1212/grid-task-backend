@@ -4,7 +4,7 @@ using TestTask.Backend.DataAccess.Repositories.Users;
 
 namespace TestTask.Backend.DataAccess.Json
 {
-    public class JsonUserRepository : IUserRepository
+    internal class JsonUserRepository : IUserRepository
     {
         private const string FILE_PATH = "./users.json";
 
@@ -62,7 +62,7 @@ namespace TestTask.Backend.DataAccess.Json
 
         private async Task RewriteJsonFileAsync(ICollection<User> users)
         {
-            using var stream = File.OpenWrite(FILE_PATH);
+            using var stream = File.Create(FILE_PATH);
             await JsonSerializer.SerializeAsync(stream, users);
         }
     }
