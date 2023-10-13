@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TestTask.Backend.Configuration\TestTask.Backend.Configuration.csproj" />
     <ProjectReference Include="..\TestTask.Backend.DataAccess\TestTask.Backend.DataAccess.csproj" />
   </ItemGroup>
 </Project>

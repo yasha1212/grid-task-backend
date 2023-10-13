@@ -1,6 +1,9 @@
 ﻿using TestTask.Backend.DataAccess;
+using TestTask.Backend.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var configuration = builder.Configuration.Get<AppConfiguration>();
 
 builder.Services.AddDataAccess();
 builder.Services.AddControllers();
@@ -16,6 +19,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(builder =>
+{
+    builder.WithOrigins(configuration.Cors.Origins)
+        .AllowAnyMethod()
+        .WithHeaders("content-type", "origin");
+});
 
 app.MapControllers();
 
