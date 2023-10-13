@@ -4,7 +4,6 @@ using TestTask.Backend.DataAccess.Repositories.Users;
 
 namespace TestTask.Backend.Web.Controllers;
 
-[Route("user")]
 public class UserController : ApiController
 {
     private readonly IUserRepository _userRepository;
