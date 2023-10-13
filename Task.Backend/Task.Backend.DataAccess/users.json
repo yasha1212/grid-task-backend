@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": 1,
+    "firstName": "Aliaksei",
+    "lastName": "Shukan",
+    "email": "some.email@gmail.com"
+  },
+  {
+    "id": 2,
+    "firstName": "Max",
+    "lastName": "Turing",
+    "email": "some.cool.email@gmail.com"
+  },
+  {
+    "id": 3,
+    "firstName": "Nicola",
+    "lastName": "Tesla",
+    "email": "my.email@gmail.com"
+  },
+  {
+    "id": 4,
+    "firstName": "Christoph",
+    "lastName": "Waltz",
+    "email": "1great1.email@gmail.com"
+  },
+  {
+    "id": 5,
+    "firstName": "LeBron",
+    "lastName": "James",
+    "email": "44email@gmail.com"
+  }
+]
