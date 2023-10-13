@@ -2,7 +2,7 @@
 
 namespace TestTask.Backend.DataAccess.Entities
 {
-	public class User
+    public class User
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }
@@ -10,11 +10,11 @@ namespace TestTask.Backend.DataAccess.Entities
         [JsonPropertyName("firstName")]
         public string FirstName { get; set; }
 
-		[JsonPropertyName("lastName")]
-		public string LastName { get; set; }
+        [JsonPropertyName("lastName")]
+        public string LastName { get; set; }
 
-		[JsonPropertyName("email")]
-		public string Email { get; set; }
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
     }
 }
 

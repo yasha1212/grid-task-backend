@@ -8,15 +8,15 @@ namespace TestTask.Backend.DataAccess
     {
         public static IServiceCollection AddDataAccess(this IServiceCollection services) 
         {
-			if (services is null)
-			{
-				throw new ArgumentNullException(nameof(services));
-			}
+            if (services is null)
+            {
+                throw new ArgumentNullException(nameof(services));
+            }
 
-			services.AddScoped<IUserRepository, JsonUserRepository>();
+            services.AddScoped<IUserRepository, JsonUserRepository>();
 
-			return services;
-		}
-	}
+            return services;
+        }
+    }
 }
 

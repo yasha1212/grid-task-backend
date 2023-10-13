@@ -2,9 +2,9 @@
 
 namespace TestTask.Backend.Web.Controllers
 {
-	[ApiController]
-	[Route("api/[controller]")]
-	public abstract class ApiController : ControllerBase
-	{
-	}
+    [ApiController]
+    [Route("api/[controller]")]
+    public abstract class ApiController : ControllerBase
+    {
+    }
 }

@@ -19,10 +19,10 @@ public class UserController : ApiController
     {
         try
         {
-			var users = await _userRepository.GetAllAsync();
+            var users = await _userRepository.GetAllAsync();
 
-			return Ok(users);
-		}
+            return Ok(users);
+        }
         catch (Exception e) 
         {
             return StatusCode(500, e.Message);
@@ -34,10 +34,10 @@ public class UserController : ApiController
     {
         try
         {
-			await _userRepository.AddAsync(user);
+            await _userRepository.AddAsync(user);
 
-			return Ok();
-		}
+            return Ok();
+        }
         catch (Exception e)
         {
             return StatusCode(500, e.Message);
@@ -47,31 +47,31 @@ public class UserController : ApiController
     [HttpPut]
     public async Task<IActionResult> Update(User user)
     {
-		try
-		{
-			await _userRepository.UpdateAsync(user);
+        try
+        {
+            await _userRepository.UpdateAsync(user);
 
-			return Ok();
-		}
-		catch (Exception e)
-		{
-			return StatusCode(500, e.Message);
-		}
-	}
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
 
     [HttpDelete]
     public async Task<IActionResult> Delete(int id)
     {
-		try
-		{
-			await _userRepository.DeleteAsync(id);
+        try
+        {
+            await _userRepository.DeleteAsync(id);
 
-			return Ok();
-		}
-		catch (Exception e)
-		{
-			return StatusCode(500, e.Message);
-		}
-	}
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
 }
 
